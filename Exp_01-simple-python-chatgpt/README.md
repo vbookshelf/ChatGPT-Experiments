@@ -37,5 +37,5 @@ $ python chatgpt-simple.py
 
 ### Resources
 
-ChatGPT in Python for Beginners - Build A Chatbot<br>
+- ChatGPT in Python for Beginners - Build A Chatbot<br>
 https://www.youtube.com/watch?v=pGOyw_M1mNE
