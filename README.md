@@ -1,5 +1,5 @@
-# ChatGPT-Experiments
-My experiments with creating a ChatGPT chatbot and deploying it on a shared website hosting server.
+# Maiya-ChatGPT-Experiments
+My experiments with creating a ChatGPT chatbot, named Maiya, and deploying it/her on a shared website hosting server.
 
 <br>
 
