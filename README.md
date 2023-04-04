@@ -13,3 +13,6 @@ https://github.com/vbookshelf/ChatGPT-Experiments/tree/main/Exp_02-simple-php-fo
 
 - Exp_03 - Process php form input on the same page as the form<br>
 https://github.com/vbookshelf/ChatGPT-Experiments/tree/main/Exp_03-process-php-form-input-on-same-page
+
+- Exp_04 - Review two simple methods to print form input on the same page as the form<br>
+https://github.com/vbookshelf/ChatGPT-Experiments/tree/main/Exp_04-echo-form-input-on-same-page
