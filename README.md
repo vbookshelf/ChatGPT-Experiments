@@ -1,5 +1,5 @@
 # ChatGPT-Experiments
-My experiments with ChatGPT
+My experiments with creating a ChatGPT chatbot and deploying it on a shared server.
 
 <br>
 
