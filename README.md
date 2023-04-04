@@ -1,5 +1,6 @@
 # Maiya-ChatGPT-Experiments
-My experiments with creating a ChatGPT english teacher, named Maiya, and deploying it/her on a shared web hosting server.
+My experiments with creating a ChatGPT english teacher, named Maiya, and deploying it/her on a shared web hosting server.<br>
+This project is in progress...
 
 <br>
 <img src="https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/blob/main/images/teacher-gf0ffa24b0_640.png" width="200"></img>
