@@ -16,3 +16,6 @@ https://github.com/vbookshelf/ChatGPT-Experiments/tree/main/Exp_03-process-php-f
 
 - Exp_04 - Review two simple methods to print form input on the same page as the form<br>
 https://github.com/vbookshelf/ChatGPT-Experiments/tree/main/Exp_04-echo-form-input-on-same-page
+
+- Exp_05 - Create a simple php chatgpt chatbot and deploy it on a shared server<br>
+https://github.com/vbookshelf/ChatGPT-Experiments/tree/main/Exp_05-simple-php-chatgpt-chatbot-deployed-on-shared-server
