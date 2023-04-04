@@ -1,4 +1,4 @@
-## Exp_04 - Create a simple php chatgpt chatbot and deploy it on a shared server
+## Exp_05 - Create a simple php chatgpt chatbot and deploy it on a shared server
 <br>
 
 ### Objective
