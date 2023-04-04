@@ -1,4 +1,4 @@
-## Exp_02 - Review a simple method to work with a form on php
+## Exp_02 - Review a simple method to work with a form using php
 <br>
 
 ### Objective
