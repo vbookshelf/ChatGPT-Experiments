@@ -26,3 +26,7 @@ https://github.com/vbookshelf/ChatGPT-Experiments/tree/main/Exp_04-echo-form-inp
 
 - Exp_05 - Create a simple php chatgpt chatbot and deploy it on a shared server<br>
 https://github.com/vbookshelf/ChatGPT-Experiments/tree/main/Exp_05-simple-php-chatgpt-chatbot-deployed-on-shared-server
+
+- Exp_06 - Use Ajax to send and receive data<br>
+(Good simple Ajax example)<br>
+https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_06-use-ajax-to-send-data
