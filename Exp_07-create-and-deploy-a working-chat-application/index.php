@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+	
+	<meta charset="utf-8">
+	<title>Maiya - English Teacher</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="An ESL teacher chatbot powered by ChatGPT.">
+		
+		
+	<!--CSS Stylesheets-->
+	<link rel="stylesheet" href="css/w3.css">
+	
+	
+    <style>
+      body {
+        background-color: #f9f9f9;
+		font-family: Arial, sans-serif;
+		font-size: 16px;
+		color: #36454F;
+      }
+	   main {
+	   	margin-bottom: 200px;
+	   	color: #36454F;
+        padding: 10px;
+	}
+      .container {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+	  
+      .sticky-bar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #36454F; /* Charcoal */
+        color: #fff;
+        padding: 30px;
+        text-align: center;
+      }
+      .sticky-bar input[type="text"] {
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        margin-right: 10px;
+        width: 60%;
+        font-size: 18px;
+      }
+      .sticky-bar input[type="submit"] {
+        background-color: #fff;
+        color: #333;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-left: 10px;
+      }
+	  .message-container {
+        margin-bottom: 10px;
+        padding: 5px 20px;
+        background-color: #f0f0f0;
+        border-radius: 5px;
+		line-height: 1.8;
+		letter-spacing: 0.02em;
+	}
+	.set-color1 {
+		color: red;
+	}
+	.set-color2 {
+		color: purple;
+	}
+	
+	</style>
+
+	
+  </head>
+  <body>
+    <div class="container w3-animate-opacity">
+		
+		<img src="assets/teacher.png" alt="Avatar" width="200">
+	
+      <h3>Maiya - English Teacher</h3>
+	
+	  
+	  <main id="chat">
+	      <div class="message-container">
+	        <span class="set-color1"><b>&#x2022 Maiya</b></span><p>I'd love to help you practice english. To get started just say hi!</p>
+	      </div>
+		  
+		  
+	      <!-- Add more message containers here -->
+ 	 </main>
+	 
+	 
+	 
+	 
+      <div class="sticky-bar">
+		  
+		<form id="myForm" action="chatgpt-api-code.php" method="post">
+          <input id="user-input" type="text" name="my_message" placeholder="Send a message..." autofocus>
+		  <input type="hidden" name="robotblock">
+		  <input type="submit" value="Send">
+	  	</form>
+      </div>
+	  
+    </div>
+	
+
+	
+	
+	<!--The page gets scrolled up to this id.-->
+	<div id="bottom-bar">
+	</div>
+	
+	<!--Onload a click is simulated on this to scroll the page to id="bottom-bar"-->
+	<a href="#bottom-bar" id="scroll-page-up"></a>
+	
+  </body>
+</html>
+
+
+
+
+<script>
+	
+	// This function formats the text into paragraphs.
+	function formatResponse(response) {
+		
+	    // Split the response into lines
+	    const lines = response.split("\n");
+	
+	    // Combine the lines into paragraphs
+	    const paragraphs = [];
+	    let currentParagraph = "";
+	
+	    for (const line of lines) {
+	        if (line.trim()) {  // Check if the line is non-empty
+	            currentParagraph += line.trim() + " ";
+	        } else if (currentParagraph) {  // Check if the current paragraph is non-empty
+	            paragraphs.push(currentParagraph.trim());
+	            currentParagraph = "";
+	        }
+	    }
+	
+	    // Append the last paragraph
+	    if (currentParagraph) {
+	        paragraphs.push(currentParagraph.trim());
+	    }
+	
+	    // Add HTML tags to separate paragraphs
+	    const formattedResponse = paragraphs.map(p => `<p>${p}</p>`).join("");
+
+    return formattedResponse;
+}
+
+</script>
+
+
+<script>
+
+//Simulates a click.
+function simulateClick(tabID) {
+	
+	document.getElementById(tabID).click();
+}
+
+</script>
+
+
+<script>
+	
+// Function to create a new message container
+function createMessageContainer(message) {
+	
+  var messageContainer = document.createElement("div");
+  messageContainer.classList.add("message-container");
+  
+  messageContainer.classList.add("w3-animate-opacity");
+  
+
+  var messageText = document.createElement("span"); //p
+  
+  
+  // This if statement sets the coour of the name that gets displayed
+  if (message.sender == 'Maiya') {
+  
+	  messageText.innerHTML = "<span class='set-color1'><b>&#x2022 " + message.sender + "</b></span>" + message.text;
+  } else {
+  	messageText.innerHTML = "<span class='set-color2'><b>&#x2022 " + message.sender + "</b></span>" + message.text;
+	}
+
+ 
+  messageContainer.appendChild(messageText);
+  
+
+  return messageContainer;
+}
+
+
+// Function to add a new message to the chat
+function addMessageToChat(message) {
+	
+  var chat = document.getElementById("chat");
+  var messageContainer = createMessageContainer(message);
+  
+  chat.appendChild(messageContainer);
+  
+}
+	
+</script>
+
+
+<script>
+	
+// Ajax Code
+/////////////
+	
+var form = document.getElementById('myForm');
+
+form.onsubmit = function(event) {
+	
+  // Prevent the default form submission behavior
+  event.preventDefault();
+  // Get the form data
+  var formData = new FormData(form);
+  
+  // Clear the form input
+  form.reset();
+  
+  // Get the value of my_message
+  var $my_message = formData.get("my_message");
+  //console.log($my_message);
+  
+  // Format the input into paragraphs. This
+  // adds paragrah html to the students chat.
+  // It's main use is in Maiya's chat where the long response needs 
+  // to be formatted into separate paragraphs.
+  $my_message = formatResponse($my_message);
+
+  
+  var input_message = {
+  sender: "Student",
+  text: $my_message
+	};
+	
+	
+	console.log(input_message.text);
+	
+	
+	// Add a user message to the chat
+	addMessageToChat(input_message);
+	
+	
+	// Scroll the page up by cicking on a div at the bottom of the page.
+	simulateClick('scroll-page-up');
+  
+  
+  
+  //console.log(formdata);
+  // Send an AJAX request to the server to process the form data
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', form.action, true);
+  
+  xhr.onload = function() {
+	  
+    if (xhr.status === 200) {
+      var response = JSON.parse(xhr.responseText);
+	  
+	  // Write the response on the console
+      //console.log(response.chat_text);
+	  
+	  
+	  // Format the response into separate paragrahs
+	  var paragraph_response = formatResponse(response.chat_text);
+	 
+	  
+	  console.log(paragraph_response);
+	  
+	  var input_message = {
+		  sender: "Maiya",
+	  	text: paragraph_response
+		};
+	
+	
+	//console.log(input_message.text);
+	
+	
+
+	// Add the message from Maiya to the chat
+	addMessageToChat(input_message);
+	
+	
+	// Scroll the page up by cicking on a div at the bottom of the page.
+	simulateClick('scroll-page-up');
+	
+	// Put the cursor in the form input field
+	const inputField = document.getElementById("user-input");
+	inputField.focus();
+	  
+	  
+    }
+  };
+  
+  xhr.send(formData);
+};
+
+</script>
+
+
