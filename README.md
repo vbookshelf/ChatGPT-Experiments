@@ -30,3 +30,6 @@ https://github.com/vbookshelf/ChatGPT-Experiments/tree/main/Exp_05-simple-php-ch
 - Exp_06 - Use Ajax to send and receive data<br>
 (Good simple Ajax example)<br>
 https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_06-use-ajax-to-send-data
+
+- Exp_07 - Create and deploy a working chat application<br>
+https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_07-create-and-deploy-a%20working-chat-application
