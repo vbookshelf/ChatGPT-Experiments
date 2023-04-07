@@ -41,6 +41,9 @@ https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_08-Added-s
 (The chatbot emulates the character of Dracula. The chat transcript is available.)<br>
 https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_09-testing-a-roleplay-chatbot-companion-with-context-memory
 
+- Exp_10 - Implemented array slicing to reduce the number of tokens<br>
+https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_10-implemented-array-slicing-to-reduce-num-tokens
+
 
 ## Lesons learned
 
