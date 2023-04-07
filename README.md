@@ -1,5 +1,5 @@
 # Maiya ChatGPT Experiments
-My experiments with creating a ChatGPT bot, named Maiya, and deploying it on a shared web hosting server.<br>
+My experiments with creating and deploying a ChatGPT bot named Maiya.<br>
 This project is in progress...
 
 <br>
