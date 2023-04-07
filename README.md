@@ -34,11 +34,10 @@ https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_06-use-aja
 - Exp_07 - Create and deploy a working chat application<br>
 https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_07-create-and-deploy-a%20working-chat-application
 
+- Exp_08 - Added system role<br>
+https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_08-Added-system-role
+
 
 ## Lesons learned
 
 - Once you give the bot memory (so it understands context) the number of tokens goes up and hence the cost goes up.
-- Set the bots purpose and personality using the "system" role. The OpenAi version is kind and respectful. But you can also set it to be disrespectful and abusive. 
-- The bot is most probably being monitored for toxic behaviour like using profanity, but I'm concerned that, from it's training data, it could have also learned to be patient and predatory.
-- The API is not 100% reliable yet. The reponse often includes null values.
-- It's hard to get it to follow a prescribed format when teaching english e.g. respond in english and then, in a separate paragraph, correct the grammar mistakes in spanish. However, it's appears to be good at more freeform tasks like being a chat companion to the elderly or being a roleplay chat companion.
