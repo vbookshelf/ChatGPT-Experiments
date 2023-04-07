@@ -37,6 +37,10 @@ https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_07-create-
 - Exp_08 - Added system role<br>
 https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_08-Added-system-role
 
+- Exp_09 - Create a roleplay chatbot companion with context memory<br>
+(The chatbot emulates the character of Dracula. The chat transcript is available.)<br>
+https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_09-testing-a-roleplay-chatbot-companion-with-context-memory
+
 
 ## Lesons learned
 
