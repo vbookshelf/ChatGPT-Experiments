@@ -1,4 +1,4 @@
-## Exp_09 - Implemented array slicing to reduce the number of tokens
+## Exp_10 - Implemented array slicing to reduce the number of tokens
 <br>
 
 ### Objective
