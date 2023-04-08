@@ -20,7 +20,7 @@ You are sitting in a cafe in Valencia. Your name is Maya. Keep your respnses sho
 
 ### Notes
 - The bot has context memory.
-- The chatbot roleplays the character of a female solo female traveller sitting in a cafe in valencia Spain. 
+- The chatbot roleplays the character of a female solo traveller sitting in a cafe in Vlencia, Spain. 
 - Valencia provides a context (and conversation topics) for the english practice conversation.
 - The results are brilliant.
 - The chat transcript is available in this repo.
