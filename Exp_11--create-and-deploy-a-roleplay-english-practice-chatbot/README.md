@@ -4,7 +4,7 @@
 ### Objective
 
 - When it's purpose is to be helpful the bot can behave like a customer service agent.<br>
-It asks too many questions and it regularly asks. "Is there anything I can help you with?"
+It asks too many questions and it regularly asks, "Is there anything I can help you with?"
 - To get the bot to speak naturally, I created a roleplay context. 
 - The goal is to create a bot that Spanish speakers can use to practice english.
 
