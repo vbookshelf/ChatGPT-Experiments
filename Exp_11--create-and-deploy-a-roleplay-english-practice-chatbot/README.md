@@ -27,7 +27,7 @@ You are sitting in a cafe in Valencia. Your name is Maya. Keep your respnses sho
 - This is a gamified approach to language learning. It's like the movie "Live, Die, Repeat".<br>
 The context is fixed but there are many possible variations to the story within that context.
 - This is designed to be a language learning tool, but one possibility is that user's will forget the language learning apect and simply approach this as a roleplay game.
-- the app freezes when the token count is exceeded.
+- The app freezes when the token count is exceeded.
 
 ### References
 
