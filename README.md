@@ -44,7 +44,11 @@ https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_09-testing
 - Exp_10 - Implemented array slicing to reduce the number of tokens<br>
 https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_10-implemented-array-slicing-to-reduce-num-tokens
 
+- Exp_11 - Create and deploy a roleplay english practice chatbot<br>
+(This is a fully functional chat web app. The chat transcript is available.)
+https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_11--create-and-deploy-a-roleplay-english-practice-chatbot
 
-## Lesons learned
+
+## Lessons learned
 
 - Once you give the bot memory (so it understands context) the number of tokens goes up and hence the cost goes up.
