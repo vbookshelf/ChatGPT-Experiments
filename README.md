@@ -52,3 +52,4 @@ https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_11--create
 ## Lessons learned
 
 - Once you give the bot memory (so it understands context) the number of tokens goes up and hence the cost goes up.
+- It seems that when the max number of tokens is exceeded the system returns a null response. And the chat appears to freeze on the OpenAi side. This happens when the chat becomes too long.
