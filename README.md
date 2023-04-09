@@ -48,6 +48,9 @@ https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_10-impleme
 (This is a fully functional chat web app. The chat transcript is available.)<br>
 https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_11--create-and-deploy-a-roleplay-english-practice-chatbot
 
+- Exp_12 - Added php code to handle a null response<br>
+https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_12-added-code-to-handle-a-null-response
+
 
 ## Lessons learned
 
