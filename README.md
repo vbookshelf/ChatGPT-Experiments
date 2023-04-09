@@ -45,7 +45,7 @@ https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_09-testing
 https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_10-implemented-array-slicing-to-reduce-num-tokens
 
 - Exp_11 - Create and deploy a roleplay english practice chatbot<br>
-(This is a fully functional chat web app. The chat transcript is available.)
+(This is a fully functional chat web app. The chat transcript is available.)<br>
 https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_11--create-and-deploy-a-roleplay-english-practice-chatbot
 
 
