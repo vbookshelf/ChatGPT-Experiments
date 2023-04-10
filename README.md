@@ -51,6 +51,10 @@ https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_11--create
 - Exp_12 - Added php code to handle a null response<br>
 https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_12-added-code-to-handle-a-null-response
 
+- Exp_13 - Demo of ChatGPT providing wrong facts in a confident tone<br>
+The chat transcript is available in the folder.<br>
+https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_13-chatgpt-wrong-facts-with-a-confident-tone
+
 
 ## Lessons learned
 
