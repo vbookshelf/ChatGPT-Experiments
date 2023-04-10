@@ -3,7 +3,7 @@ My experiments with creating and deploying a ChatGPT bot named Maiya.<br>
 This project is in progress...
 
 <br>
-<img src="https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/blob/main/images/teacher-gf0ffa24b0_640.png" width="200"></img>
+<img src="https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/blob/main/images/teacher1.png" width="250"></img>
 <i>Maiya</i><br>
 
 <br>
