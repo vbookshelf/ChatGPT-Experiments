@@ -55,6 +55,9 @@ https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_12-added-c
 The chat transcript is available in the folder.<br>
 https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_13-chatgpt-wrong-facts-with-a-confident-tone
 
+- Exp_14 - A simple javascript API call<br>
+https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_14-Simple-Javascript-api-call
+
 
 ## Lessons learned
 
