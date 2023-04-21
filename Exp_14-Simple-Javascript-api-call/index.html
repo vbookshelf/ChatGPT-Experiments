@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Javascript - OpenAi API Request</title>
+</head>
+
+<body>
+	<h2>Testing...</h2>
+	
+<!-- The Ajax response gets displayed in this div -->
+<div id="chatgpt-response">
+	The response from chatgpt will be displayed here.
+</div>
+
+</body>
+</html>
+
+<script>
+	
+const apiKey = 'your-api-key'; // replace with your OpenAI API key
+const model_type = "gpt-3.5-turbo";
+const openai_url = 'https://api.openai.com/v1/chat/completions';
+const max_tokens = 100;
+const temperature = 0.5;
+
+const my_message = 'What is your name?'; // replace with your prompt text
+
+
+
+// Create an empty list
+let message_list = [];
+
+
+// Append the system role to the messages list.
+// This will included in every message that get's submitted
+system_setup_message = "You are a friendly assistant.";
+
+message_list.push({"role": "system", "content": system_setup_message});
+
+
+async function makeApiRequest() {
+	
+  try {
+	  
+	// Append to message_list
+	message_list.push({"role": "user", "content": my_message});
+	
+    const response = await fetch(openai_url, {
+      method: 'POST',
+      headers: {
+		Authorization: `Bearer ${apiKey}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+		 model: model_type,
+        messages: message_list,
+        max_tokens: max_tokens,
+		temperature: temperature		
+      })
+    })
+
+    const data = await response.json();
+	
+	// Get the response text
+	const response_text = data['choices'][0]['message']['content'];
+	
+    console.log(response_text);
+	
+	 // Write the message into a div that has the id ajax-response
+	 document.getElementById("chatgpt-response").innerHTML = response_text;
+	
+  } catch (error) {
+    console.error(error);
+  }
+  
+}
+
+// This function will run when the page loads
+makeApiRequest();
+
+
+	
+</script>
