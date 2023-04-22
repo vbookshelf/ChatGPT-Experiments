@@ -6,7 +6,7 @@
 - Check how well the bot complies with the instructions given in the system message.
 
 ### Notes
-- The bot's complied brilliantly. 
+- The chatbot complied brilliantly. 
 
 ```
 
