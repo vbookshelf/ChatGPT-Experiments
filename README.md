@@ -68,9 +68,10 @@ https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_16-secret-
 
 ## Lessons learned
 
+- The OpenAi setup is constantly evolving, which is to be expected when a brand new tech paradigm is being developed, perfected and secured. So far this technology is just exceeding all expectations. It's scareciting (exciting + scary).
 - Once you give the bot memory (so it understands context) the number of tokens goes up and hence the cost goes up.
 - It seems that when the max number of tokens is exceeded the system returns a null response. And the chat appears to freeze on the OpenAi side. This happens when the chat becomes too long.
 - The bot's behaviour is not constant and predictable. For example, on one day setting the system content message causes the bot to convincingly roleplay a certain character but the next day, with the same system content message, the bot goes back to behaving like an online assistant: "How can I help you today?". This could be because it's ignoring the system content mesaage, or because of randomness due to the temperature parameter or because the OpenAi team is constantly monitoring the bot's interactions and modfying it's behaviour. Concern: There's a key part of the user experience that the developer has no absolute control over. 
 - Creating the API calls with Javascript allows the chatbot to be run from the desktop using the computer's memory to store the context. Also, by using Javascript there's no need to deploy the app on a server. The app can be run locally by simply opening the index.html file in the browser.
-- OpenAi may be adding suffixes to ChatGPT's responses.
-- It appears that at times of high load (when the US wakes up) the api becomes unreliable.
+- OpenAi may be adding suffixes to ChatGPT's responses. 
+
