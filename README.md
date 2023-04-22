@@ -61,6 +61,9 @@ https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_14-Simple-
 - Exp_15 - A fully functional Javascript API chatbot<br>
 https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_15-Fully-functional-javascript-api-chatbot
 
+- Exp_16 - Test secret superhero system message compliance<br>
+https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_16-secret-superhero-system-message-setup
+
 <br>
 
 ## Lessons learned
