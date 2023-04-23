@@ -37,7 +37,7 @@ but I can't shake off this feeling that there's more to you than meets the eye.
 
 ```
 
-## ChatGPT generated hypothetical artcle discussing a possible use cases for this roleplay capability
+## ChatGPT generated hypothetical artcle discussing possible use cases for this roleplay capability
 
 
 
