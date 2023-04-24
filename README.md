@@ -64,6 +64,9 @@ https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_15-Fully-f
 - Exp_16 - Test secret superhero system message compliance<br>
 https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_16-secret-superhero-system-message-setup
 
+- Exp_17 - Implemented saving and reloading of chat history in Javascript<br>
+https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_17-saving-and-reloading-chat-history
+
 <br>
 
 ## Lessons learned
