@@ -67,6 +67,9 @@ https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_16-secret-
 - Exp_17 - Implemented saving and reloading of chat history in Javascript<br>
 https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_17-saving-and-reloading-chat-history
 
+- Exp_18 - Capt Jack Sparrow emulator chatbot<br>
+https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_18-capt-jack-sparrow-emulator
+
 <br>
 
 ## Lessons learned
