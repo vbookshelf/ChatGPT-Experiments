@@ -70,6 +70,9 @@ https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_17-saving-
 - Exp_18 - Capt Jack Sparrow emulator chatbot<br>
 https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_18-capt-jack-sparrow-emulator
 
+- Exp_19 - Simple OpenAI API request using the python requests package<br>
+https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_19-simple-openai-api-request-using-python-requests-package
+
 <br>
 
 ## Lessons learned
@@ -80,4 +83,5 @@ https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_18-capt-ja
 - The bot's behaviour is not constant and predictable. For example, on one day setting the system content message causes the bot to convincingly roleplay a certain character but the next day, with the same system content message, the bot goes back to behaving like an online assistant: "How can I help you today?". This could be because it's ignoring the system content mesaage, or because of randomness due to the temperature parameter or because the OpenAi team is constantly monitoring the bot's interactions and modfying it's behaviour. Concern: There's a key part of the user experience that the developer has no absolute control over. 
 - Creating the API calls with Javascript allows the chatbot to be run from the desktop using the computer's memory to store the context. Also, by using Javascript there's no need to deploy the app on a server. The app can be run locally by simply opening the index.html file in the browser.
 - OpenAi may be adding suffixes to ChatGPT's responses. 
+- The openai python package can give errors during setup and use. It's simpler to use the python requests package to make the api requests (see exp19)
 
