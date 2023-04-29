@@ -85,3 +85,11 @@ https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_19-simple-
 - OpenAi may be adding suffixes to ChatGPT's responses. 
 - The openai python package can give errors during setup and use. It's simpler to use the python requests package to make the api requests (see exp19)
 
+<br>
+
+## Resources
+Andrew Ng course:<br>
+ChatGPT Prompt Engineering for Developers<br>
+https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/
+
+<br>
