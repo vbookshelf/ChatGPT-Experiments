@@ -73,6 +73,9 @@ https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_18-capt-ja
 - Exp_19 - Simple OpenAI API request using the python requests package<br>
 https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_19-simple-openai-api-request-using-python-requests-package
 
+- Exp_20 - Pizzabot: Automated service to order pizza<br>
+https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/blob/main/Exp_20-pizza-bot/README.md
+
 <br>
 
 ## Lessons learned
