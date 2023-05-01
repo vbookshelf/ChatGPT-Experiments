@@ -1,4 +1,4 @@
-## Exp_20 - Pizzabot: Automated service to order pizze
+## Exp_20 - Pizzabot: Automated service to order pizza
 <br>
 
 ### Objective
