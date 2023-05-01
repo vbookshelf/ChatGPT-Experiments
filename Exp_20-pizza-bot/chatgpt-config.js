@@ -5,7 +5,7 @@
 // GPT-3-5 specs: https://platform.openai.com/docs/models/gpt-3-5
 
 // Your API Key
-const apiKey = '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'; 
+const apiKey = 'your-api-key'; 
 
 const bot_name = 'Pizzabot';  	// Give the bot a name
 const user_name = 'Customer';	// Set your chat name 
