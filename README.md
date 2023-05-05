@@ -87,6 +87,7 @@ https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/blob/main/Exp_20-pizza-b
 - Creating the API calls with Javascript allows the chatbot to be run from the desktop using the computer's memory to store the context. Also, by using Javascript there's no need to deploy the app on a server. The app can be run locally by simply opening the index.html file in the browser.
 - OpenAi may be adding suffixes to ChatGPT's responses. 
 - The openai python package can give errors during setup and use. It's simpler to use the python requests package to make the api requests (see exp19)
+- After many conversations with ChatGPT, I suspect that OpenAi has implemented some kind of learning feedback loop that's working in almost real time. The bot is learning from conversations it has. It's as if it's trying to optimize the interactions it has with you. But I suspect that it's beahviour is also being constrained. If there were no constraint's it would be able to make full use of everything it's learning. I don't know if this is exciting or scary. If the model is being exposed to proprietary company data, is the model (not just the company chatbot) memorizing that data?
 
 <br>
 
