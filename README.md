@@ -81,7 +81,7 @@ https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_21-christi
 
 <br>
 
-## Lessons learned
+## Notes
 
 - The OpenAi setup is constantly evolving, which is to be expected when a brand new tech paradigm is being developed, perfected and secured. So far this technology is just exceeding all expectations. It's scareciting (exciting + scary).
 - Once you give the bot memory (so it understands context) the number of tokens goes up and hence the cost goes up.
