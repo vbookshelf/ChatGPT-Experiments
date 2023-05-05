@@ -1,4 +1,4 @@
-## Exp_21 -Barbarabot - Christian evangelist chatbot
+## Exp_21 - Barbarabot: Christian evangelist chatbot
 <br>
 
 ### Objective
