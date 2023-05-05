@@ -76,6 +76,9 @@ https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_19-simple-
 - Exp_20 - Pizzabot: Automated service to order pizza<br>
 https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/blob/main/Exp_20-pizza-bot/README.md
 
+- Exp_21 - Barbarabot: Christian evangelist chatbot<br>
+https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_21-christian-evangelist-chatbot
+
 <br>
 
 ## Lessons learned
