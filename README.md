@@ -79,6 +79,9 @@ https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/blob/main/Exp_20-pizza-b
 - Exp_21 - Barbarabot: Christian evangelist chatbot<br>
 https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_21-christian-evangelist-chatbot
 
+- Exp_22 - Flask app with text to speech<br>
+https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_22-Flask-with-text-to-sppech
+
 <br>
 
 ## Notes
