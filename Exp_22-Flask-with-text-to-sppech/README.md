@@ -19,11 +19,24 @@
 <br>
 
 ```
+system_setup_message = `
+Your name is ${bot_name}. You are a helpful assistant.
+Your responses are being converted from text to speech using gTTS.
+You optimize your responses for gTTS.
+`;
+
+```
+<br>
+
+```
 
 1. Download the project folder, unzip it and place it on your desktop.
 Then open your command line console.
 The instructions that follow should be typed on the command line. 
 There’s no need to type the $ symbol.
+
+Add your OpenAI API key in the chatgpt-config.js file.
+static/js/chatgpt-config.js
 
 2. $ cd Desktop
 
