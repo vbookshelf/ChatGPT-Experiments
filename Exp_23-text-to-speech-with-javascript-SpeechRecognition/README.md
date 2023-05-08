@@ -1,4 +1,4 @@
-## Exp_23 - Text to speech with javascript SpeechRecognition
+## Exp_23 - Speech to text with javascript SpeechRecognition
 <br>
 
 ### Objective
