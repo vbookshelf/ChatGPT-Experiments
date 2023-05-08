@@ -82,6 +82,10 @@ https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_21-christi
 - Exp_22 - Flask app with text to speech<br>
 https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_22-Flask-with-text-to-sppech
 
+- Exp_23 - Text to speech with javascript SpeechRecognition<br>
+https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_23-text-to-speech-with-javascript-SpeechRecognition
+
+
 <br>
 
 ## Notes
