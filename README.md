@@ -85,7 +85,9 @@ https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_22-Flask-w
 - Exp_23 - Speech to text with javascript SpeechRecognition<br>
 https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_23-text-to-speech-with-javascript-SpeechRecognition
 
-
+- Exp_24 - Listen to mic and maker whisper api request<br>
+(Fixed PyAudio issues)<br>
+https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/exp_24-listen-to-mic-make-whisper-request
 <br>
 
 ## Notes
