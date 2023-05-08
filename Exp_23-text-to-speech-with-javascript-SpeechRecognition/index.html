@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+	
+	<meta charset="utf-8">
+	<title>Maiya - Javascript with Text to Speech</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="A personal chatbot powered by ChatGPT.">
+		
+		
+	
+	
+    <style>
+      body {
+        background-color: #f9f9f9;
+		font-family: Arial, sans-serif;
+		font-size: 18px;
+		color: #36454F;
+      }
+	   main {
+	   	margin-bottom: 200px;
+	   	color: #36454F;
+        padding: 10px;
+	}
+	
+	.responsive {
+		 width: 100%; /*Makes media scalable as the viewport size changes*/
+		 height: auto;
+		 max-width: 150px;
+		 
+		 } 
+      .container {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+	  
+      .sticky-bar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #36454F; /* Charcoal */
+        color: #fff;
+        padding: 10px; /*30px*/
+        text-align: center;
+      }
+      .sticky-bar input[type="text"] {
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        margin-right: 10px;
+        width: 60%;
+        font-size: 18px;
+      }
+      .sticky-bar input[type="submit"] {
+        background-color: #fff;
+        color: #333;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-left: 10px;
+      }
+	  .message-container {
+        margin-bottom: 10px;
+        padding: 5px 20px;
+        background-color: #f0f0f0;
+        border-radius: 5px;
+		line-height: 1.8;
+		letter-spacing: 0.02em;
+	}
+	.set-color1 {
+		color: red;
+	}
+	.set-color2 {
+		color: purple;
+	}
+	
+	
+	#chat-buttons {
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  margin-top: 10px;
+	}
+	
+	#chat-buttons button {
+	  margin-right: 20px;
+	  padding: 0px 20px;
+	  border-radius: 5px;
+	  cursor: pointer;
+	  font-size: 15px;
+	  background-color: #36454F;
+	  color: #f9f9f9;
+	  border: none;
+	}
+	
+	#chat-buttons input[type="file"] {
+	  display: none;
+	}
+	
+	#chat-buttons label {
+	  display: inline-block;
+	  padding: 0px 20px;
+	  border-radius: 5px;
+	  cursor: pointer;
+	  font-size: 15px;
+	  background-color: #36454F;
+	  color: #f9f9f9;
+	  border: none;
+	}
+		
+	#chat-buttons input[type="file"] + label {
+	  margin-right: 10px;
+	}
+	
+	#chat-buttons input[type="file"] + label:before {
+	  content: "Load a saved chat";
+	}
+	
+	.sticky-image {
+			position: fixed;
+			top: 0;
+			left: 0;
+		}
+
+	
+	</style>
+	
+	
+	
+	
+  </head>
+  <body>
+	  
+	  
+	  
+	  
+    <div class="container w3-animate-opacity">
+		
+
+	
+	  
+	  <main id="chat" class="texts">
+	      <div class="message-container">
+			  <span id="first-chat-block" class="set-color1"><b>&#x2022 ChatGPT</b></span>
+	        
+	        <p>To get started just say hello!</p>
+	      </div>
+		  
+		  
+	      <!-- Add more message containers here -->
+ 	 </main>
+	 
+	 
+	 
+	 
+      <div class="sticky-bar">
+		  
+		  
+		
+      </div>
+	 
+    </div>
+	
+	
+	<!--The page gets scrolled up to this id.-->
+	<div id="chatgpt">
+	</div>
+	
+	
+	
+  </body>
+</html>
+
+
+
+<script>
+// Source: Speech Recognition App Using Vanilla JavaScript
+// https://www.youtube.com/watch?v=-k-PgvbktX4
+
+
+
+	const texts = document.querySelector(".texts");
+
+window.SpeechRecognition =
+  window.SpeechRecognition || window.webkitSpeechRecognition;
+
+const recognition = new SpeechRecognition();
+recognition.interimResults = true;
+
+let p = document.createElement("p");
+
+recognition.addEventListener("result", (e) => {
+  texts.appendChild(p);
+  const text = Array.from(e.results)
+    .map((result) => result[0])
+    .map((result) => result.transcript)
+    .join("");
+
+  p.innerText = text;
+  
+  if (e.results[0].isFinal) {
+
+    p = document.createElement("p");
+  }
+});
+
+recognition.addEventListener("end", () => {
+  recognition.start();
+});
+
+recognition.start();
+
+
+</script>
+
+
+
+
+
+
+
+
+
+	
+
+
+
