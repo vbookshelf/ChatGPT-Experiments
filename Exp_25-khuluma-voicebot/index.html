@@ -1,0 +1,426 @@
+<!--
+App: VoiceChatGPT - Khuluma
+Created by: vbookshelf
+Github: https://github.com/vbookshelf
+Website: https://woza.work/
+Date: 9-May-2023
+License: MIT License
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+	
+	<meta charset="utf-8">
+	<title>Khuluma Voicebot - ChatGPT</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="A voice chatbot powered by ChatGPT.">
+		
+		
+	<!--CSS Stylesheets-->
+	<link rel="stylesheet" href="css/w3.css">
+	
+	<link rel="shortcut icon" type="image/png" href="assets/star.png">
+	
+	
+    <style>
+      body {
+        background-color: #f9f9f9;
+		font-family: Arial, sans-serif;
+		font-size: 18px;
+		color: #36454F;
+      }
+	   main {
+	   	margin-bottom: 200px;
+	   	color: #36454F;
+        padding: 10px;
+	}
+	
+	.responsive {
+		 width: 100%; /*Makes media scalable as the viewport size changes*/
+		 height: auto;
+		 max-width: 150px;
+		 
+		 } 
+      .container {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+	  
+      .sticky-bar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #36454F; /* Charcoal */
+        color: #fff;
+        padding: 10px; /*30px*/
+        text-align: center;
+      }
+      .sticky-bar input[type="text"] {
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        margin-right: 10px;
+        width: 60%;
+        font-size: 18px;
+      }
+      .sticky-bar input[type="submit"] {
+        background-color: #fff;
+        color: #333;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-left: 10px;
+      }
+	  .message-container {
+        margin-bottom: 10px;
+        padding: 5px 20px;
+        background-color: #f0f0f0;
+        border-radius: 5px;
+		line-height: 1.8;
+		letter-spacing: 0.02em;
+	}
+	.set-color1 {
+		color: red;
+	}
+	.set-color2 {
+		color: purple;
+	}
+	
+	
+	#chat-buttons {
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  margin-top: 10px;
+	}
+	
+	#chat-buttons button {
+	  margin-right: 20px;
+	  padding: 0px 20px;
+	  border-radius: 5px;
+	  cursor: pointer;
+	  font-size: 15px;
+	  background-color: #36454F;
+	  color: #f9f9f9;
+	  border: none;
+	}
+	
+	#chat-buttons input[type="file"] {
+	  display: none;
+	}
+	
+	#chat-buttons label {
+	  display: inline-block;
+	  padding: 0px 20px;
+	  border-radius: 5px;
+	  cursor: pointer;
+	  font-size: 15px;
+	  background-color: #36454F;
+	  color: #f9f9f9;
+	  border: none;
+	}
+		
+	#chat-buttons input[type="file"] + label {
+	  margin-right: 10px;
+	}
+	
+	#chat-buttons input[type="file"] + label:before {
+	  content: "Load a saved chat";
+	}
+	
+	.sticky-image {
+			position: fixed;
+			top: 0;
+			left: 0;
+		}
+
+	
+	</style>
+
+	
+  </head>
+  <body>
+	  
+	  
+	  
+	  
+    <div class="container w3-animate-opacity">
+		
+		<!-- -->
+		<div id="main-image">
+			<img class="responsive" src="assets/parrot.png" alt="Avatar">
+		</div>
+		
+	
+	  
+	  <main id="chat" class="texts">
+	      <div class="message-container">
+			  <span id="first-chat-block" class="set-color1"><b>&#x2022 ChatGPT</b></span>
+	        
+			 <p>Hi there, I'm Khuluma, your personal chat companion.
+				 <br>I respond using both text and voice. Please ensure that your sound is not muted. </p>
+			 <p>To have a voice conversation, first click the "Start Talking" button, then allow access to your mic and then... just say hello.</p>
+	        
+	      </div>
+		  
+	      <!-- Add more message containers here -->
+		  
+		   <!-- The div for the spinner gets
+		  added and deleted here. -->
+ 	 </main>
+	 
+	 
+	 
+	 
+	 
+	 
+      <div class="sticky-bar">
+		  
+		<form id="myForm" method="post">
+          <input id="user-input" type="text" name="my_message" placeholder="Send a message..." autofocus>
+		  <input type="hidden" name="robotblock">
+		  
+		  
+		  <input type="submit" value="Send">
+	  		
+	  	</form>
+		
+		
+		<div id="chat-buttons">
+		  <button onclick="saveChatHistoryToCsv()">Save this chat</button>
+		  <input type="file" id="csv-file" accept=".csv">
+		  <label for="csv-file"></label>
+		  
+		  <button onclick="start_recog()">Start Talking</button>
+		</div>
+		
+      </div>
+	 
+    </div>
+	
+	
+	<!--The page gets scrolled up to this id.-->
+	<div id="chatgpt">
+	</div>
+	
+	<!--Onload a click is simulated on this to scroll the page to id="bottom-bar"-->
+	<a href="#chatgpt" id="scroll-page-up"></a>
+	<a href="#test100" id="scroll-to-last-message"></a>
+	
+	
+  </body>
+</html>
+
+
+
+
+<script>
+  
+//Simulates a click.
+function simulateClick(tabID) {
+	
+	// Simulate a click.
+	document.getElementById(tabID).click();
+	
+}
+
+</script>
+
+
+<!-- Import the utils.js file -->
+<script src="utils.js"></script>
+
+
+<!-- Import the chatgpt config and api function -->
+<script src="chatgpt-config.js"></script>
+
+
+
+<script>
+	// Set the name of the bot in the first chat block
+	document.getElementById("first-chat-block").innerHTML = "<b>&#x2022 " + bot_name + "</b>";
+</script>
+
+
+<script>
+
+
+// Get the form
+var form = document.getElementById('myForm');
+
+form.onsubmit = function(event) {
+	
+	  // Prevent the default form submission behavior
+	  event.preventDefault();
+	  
+	  // Get the form data
+	  var formData = new FormData(form);
+	 
+	  
+	  // Clear the form input
+	  form.reset();
+	  
+	  // Get the value of my_message
+	  var my_message = formData.get("my_message");
+	  
+	  
+	  // Format the input into paragraphs. This
+	  // adds paragrah html to the user's chat.
+	  // It's main use is where the bot's long response needs 
+	  // to be formatted into separate paragraphs.
+	  my_message = formatResponse(my_message);
+	  
+	  console.log(my_message)
+	
+	  
+	  var input_message = {
+	  sender: user_name,
+	  text: my_message
+		};
+	
+	
+	// Add a user message to the chat
+	addMessageToChat(input_message);
+	
+	
+	// Scroll the page up by cicking on a div at the bottom of the page.
+	simulateClick('scroll-page-up');
+	
+	
+	// Make an API call and process the response.
+	// Refer to: chatgpt-config.js
+	makeApiRequest(my_message);
+	
+ 
+};	
+
+
+	
+function speak(text) { 
+
+	// Create a new instance of SpeechSynthesisUtterance
+	const utterance = new SpeechSynthesisUtterance();
+	
+	// Set the text that you want to speak
+	utterance.text = text;
+	
+	// When the speech synthesis starts, stop speech detection or
+	// the bot will hear it's own voice and respond.
+	utterance.onstart = function() {
+		
+	  console.log('Stopping recognition...')
+	  
+	  // The recognition object has been attached to the window
+	  // in order to make it available globally.
+	  window.recognition.stop();
+	  
+	};
+	
+	// When the speech synthesis ends, start the microphone input
+	utterance.onend = function() {
+		
+		// The start_recog() function will start the recognition.
+		// We won't do that here.
+	  	//window.recognition.start();
+	  
+	};
+	
+	// Speak the text
+	speechSynthesis.speak(utterance);
+
+}
+	
+</script>
+
+
+
+
+
+<script>
+	
+
+function inintialize_recognition() {
+	
+	window.SpeechRecognition =
+	window.SpeechRecognition || window.webkitSpeechRecognition;
+	
+	const recognition = new SpeechRecognition();
+	
+	window.recognition = recognition;
+	
+	console.log('recognition initialized')
+}
+
+
+// Call the function
+inintialize_recognition();
+
+
+
+
+// Source: Speech Recognition App Using Vanilla JavaScript
+// https://www.youtube.com/watch?v=-k-PgvbktX4
+
+function start_recog() {
+
+	const texts = document.querySelector(".texts");
+	
+	//window.SpeechRecognition =
+	  //window.SpeechRecognition || window.webkitSpeechRecognition;
+	
+	//const recognition = new SpeechRecognition();
+	recognition.interimResults = true;
+	
+	
+	//window.recognition = recognition;
+	
+	let p = document.createElement("p");
+	
+	recognition.addEventListener("result", (e) => {
+	  texts.appendChild(p);
+	  
+	  let text = Array.from(e.results)
+	    .map((result) => result[0])
+	    .map((result) => result.transcript)
+	    .join("");
+	
+	  p.innerText = text;
+	  
+	  if (e.results[0].isFinal) {
+	
+	    p = document.createElement("p");
+		
+	  
+	  // Format the input into paragraphs. This
+	  // adds paragrah html to the user's chat.
+	  // It's main use is where the bot's long response needs 
+	  // to be formatted into separate paragraphs.
+	  text = formatResponse(text);
+		
+		
+		// Make an API call and process the response.
+		// Refer to: chatgpt-config.js
+		makeApiRequest(text);
+	  }
+	});
+	
+	
+	recognition.addEventListener("end", () => {
+	  recognition.start();
+	});
+	
+	recognition.start();
+}
+
+
+</script>
+
+
+
