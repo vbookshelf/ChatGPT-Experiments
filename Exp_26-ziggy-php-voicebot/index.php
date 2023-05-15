@@ -256,7 +256,7 @@ const user_name = "<?php echo $user_name; ?>";
 // Remove these suffixes. I think removing them makes the chat sound more natural.
 // They will sliced off the bot's responses.
 // This is done below in the 'Remove suffixes' part of the code.
-var suffixes_list = ['How can I help you?', 'How can I assist you today?', 'How can I help you today?', 'Is there anything else you would like to chat about?', 'Is there anything else I can assist you with today?', 'Is there anything I can help you with today?', 'Is there anything else you would like to chat about today?', 'Is there anything else I can assist you with?'];
+var suffixes_list = ['How can I help you?', 'How can I assist you today?', 'How can I help you today?', 'Is there anything else you would like to chat about?', 'Is there anything else I can assist you with today?', 'Is there anything I can help you with today?', 'Is there anything else you would like to chat about today?', 'Is there anything else I can assist you with?', 'Is there anything else I can help you with?'];
 
 </script>
 
@@ -419,16 +419,23 @@ function speak(text) {
 	// Set the text that you want to speak
 	utterance.text = text;
 	
-		
-	  console.log('Stopping recognition...')
 	  
-	  // Pause (delete) the event listener.
-	  // The handleEnd function identifies which event listener we want.
-	  window.recognition.removeEventListener('end', handleEnd);
+	  // If speech recognition has been initialized.
+	  // If the user just types then speech recognition 
+	  // is not initialized and the recognition object does not exist.
+	  if (window.recognition) {
+		  
+		  console.log('Stopping recognition...')
 	  
-	  // The recognition object has been attached to the window
-	  // in order to make it available globally.
-	  window.recognition.stop();
+		  // Pause (delete) the event listener.
+		  // The handleEnd function identifies which event listener we want.
+		  window.recognition.removeEventListener('end', handleEnd);
+		  
+		  // The recognition object has been attached to the window
+		  // in order to make it available globally.
+		  window.recognition.stop();
+	  
+  		}
 
 	
 		// Speak the text
@@ -442,14 +449,16 @@ function speak(text) {
 		
 		utterance.onend = function() {
 		
-			console.log('Restarting recognition...')
-		  
-			// Add the event listener again.
-			// The handleEnd function identifies which event listener we want.
-			window.recognition.addEventListener('end', handleEnd);
-			
-			window.recognition.start();
-	  
+			if (window.recognition) {
+				
+				console.log('Restarting recognition...')
+			  
+				// Add the event listener again.
+				// The handleEnd function identifies which event listener we want.
+				window.recognition.addEventListener('end', handleEnd);
+				
+				window.recognition.start();
+	  		}
 		};
 	
 }
@@ -486,6 +495,9 @@ function initialize_recognition() {
 	
 	recognition.continuous = true;
 	
+	// *** Comment out this line for better performance on Android. ***
+	// When this line is commented out there's no intermediate voice detections,
+	// however, the bot works much better on Android.
 	recognition.interimResults = true;
 	
 	// Make the recognition object available globally
