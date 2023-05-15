@@ -90,7 +90,12 @@ https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_23-text-to
 https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/exp_24-listen-to-mic-make-whisper-request
 
 - Exp_25 - Khuluma Voicebot<br>
+(Implemented in Javascript)<br>
 https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_25-khuluma-voicebot
+
+- Exp_26 - Ziggy PHP Voicebot<br>
+(Implemented in PHP)<br>
+https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_26-ziggy-php-voicebot
 
 <br>
 
