@@ -97,6 +97,9 @@ https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_25-khuluma
 (Implemented in PHP)<br>
 https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_26-ziggy-php-voicebot
 
+- Exp_27 - Ziggy PHP Voicebot with better error handling<br>
+https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_27-ziggy-php-voicebot-with-better-error-handling
+
 <br>
 
 ## Notes
