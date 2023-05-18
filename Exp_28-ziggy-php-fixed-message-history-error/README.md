@@ -1,4 +1,4 @@
-## Exp_28 - Ziggy PHP - Fix eror in message history code
+## Exp_28 - Ziggy PHP - Fix error in message history code
 <br>
 
 ### Objective
