@@ -100,6 +100,9 @@ https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_26-ziggy-p
 - Exp_27 - Ziggy PHP Voicebot with better error handling<br>
 https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_27-ziggy-php-voicebot-with-better-error-handling
 
+- Exp_28 - Ziggy PHP - Fix error in message history code<br>
+https://github.com/vbookshelf/Maiya-ChatGPT-Experiments/tree/main/Exp_28-ziggy-php-fixed-message-history-error
+
 <br>
 
 ## Notes
