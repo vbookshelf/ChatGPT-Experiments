@@ -1,4 +1,4 @@
-## Exp_24 - Listen to mic and maker whisper api request
+## Exp_24 - Listen to mic and make whisper api request
 <br>
 
 ### Objective
